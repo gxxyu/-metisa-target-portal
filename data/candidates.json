@@ -1,0 +1,49 @@
+[
+  {
+    "protein_id": "g20483.t1",
+    "target_group": "Chitin / Cuticle",
+    "annotation": "Chitin deacetylase",
+    "species": "Bombyx sp.",
+    "identity_pct": 67.397,
+    "query_coverage_pct": 96,
+    "bitscore": 555,
+    "classification": "Arthropod",
+    "status": "KEEP",
+    "stage": "preliminary"
+  },
+  {
+    "protein_id": "g21462.t1",
+    "target_group": "Chitin / Cuticle",
+    "annotation": "Chitin synthase",
+    "species": "Caenorhabditis-related hit",
+    "identity_pct": 44.739,
+    "query_coverage_pct": 90,
+    "bitscore": 912,
+    "classification": "Other non-arthropod",
+    "status": "REVIEW",
+    "stage": "preliminary"
+  },
+  {
+    "protein_id": "g22997.t2",
+    "target_group": "Chitin / Cuticle",
+    "annotation": "Chitinase",
+    "species": "Manduca sp.",
+    "identity_pct": 75.746,
+    "query_coverage_pct": 91,
+    "bitscore": 846,
+    "classification": "Arthropod",
+    "status": "KEEP",
+    "stage": "preliminary"
+  },
+  {
+    "protein_id": "g23171.t1",
+    "target_group": "Chitin / Cuticle",
+    "annotation": "Chitinase",
+    "species": "Drosophila sp.",
+    "identity_pct": 41.646,
+    "query_coverage_pct": 72,
+    "classification": "Arthropod",
+    "status": "KEEP",
+    "stage": "preliminary"
+  }
+]

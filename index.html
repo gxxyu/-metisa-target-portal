@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Metisa plana Target Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <h2>Metisa Target Portal</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#targets">Top Targets</a></li>
+                <li><a href="#explorer">Protein Explorer</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#qc">QC</a></li>
+                <li><a href="#methods">Methods</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================
+             HOME
+        ====================================== -->
+
+        <section id="home">
+
+            <div class="hero-badge">
+                I-BIOHACKATHON 2026 · BIO-ANALYST
+            </div>
+
+            <h1>Metisa plana Target Portal</h1>
+
+            <p>
+                Bioinformatics-driven discovery of molecular targets
+                for improved bagworm control.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button id="explore-button">
+                    Explore Targets
+                </button>
+
+                <a href="#workflow" class="secondary-button">
+                    View Workflow
+                </a>
+
+            </div>
+
+
+            <div class="hero-info">
+
+                <span>26,490 Predicted Proteins</span>
+
+                <span class="hero-dot">•</span>
+
+                <span>UniProt Annotation</span>
+
+                <span class="hero-dot">•</span>
+
+                <span>Domain Validation</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <section id="stats">
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <h2>26,490</h2>
+                    <p>Predicted Proteins</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>Top 10</h2>
+                    <p>Priority Targets</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>UniProt</h2>
+                    <p>Protein Annotation</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>InterPro</h2>
+                    <p>Domain Validation</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TOP TARGETS
+        ====================================== -->
+
+        <section id="targets">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        TARGET DISCOVERY
+                    </p>
+
+                    <h2>
+                        Priority Molecular Targets
+                    </h2>
+
+                    <p class="section-description">
+                        Candidate proteins identified through bioinformatics
+                        analysis and prioritised using sequence similarity,
+                        domain evidence, biological relevance and quality
+                        assessment.
+                    </p>
+
+                </div>
+
+
+                <!-- Filled automatically by script.js -->
+
+                <div id="candidate-table"
+                     class="targets-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROTEIN EXPLORER
+        ====================================== -->
+
+        <section id="explorer">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        RANKED CANDIDATES
+                    </p>
+
+                    <h2>
+                        Protein Explorer
+                    </h2>
+
+                    <p class="section-description">
+                        Search and explore the ranked Top 100
+                        Metisa plana candidate proteins retained
+                        after integrated prioritisation.
+                    </p>
+
+                </div>
+
+
+                <div class="explorer-box">
+
+
+                    <div class="search-area">
+
+                        <input
+                            type="text"
+                            id="protein-search"
+                            placeholder="Search protein ID, function, family or target class..."
+                        >
+
+                        <button id="search-button">
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-area">
+
+                        <select id="family-filter">
+
+                            <option value="">
+                                All Target Classes
+                            </option>
+
+                            <option value="DIGESTION">
+                                Digestion
+                            </option>
+
+                            <option value="TARGET-SITE">
+                                Target-Site
+                            </option>
+
+                        </select>
+
+
+                        <select id="status-filter">
+
+                            <option value="">
+                                All Expression Levels
+                            </option>
+
+                            <option value="Very High">
+                                Very High
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                            <option value="Moderate">
+                                Moderate
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Filled automatically by script.js -->
+
+                    <div id="protein-results"
+                         class="protein-results">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WORKFLOW
+        ====================================== -->
+
+        <section id="workflow">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        ANALYSIS PIPELINE
+                    </p>
+
+                    <h2>
+                        Bioinformatics Workflow
+                    </h2>
+
+                    <p class="section-description">
+                        From predicted Metisa plana proteins
+                        to biologically prioritised molecular targets.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-grid">
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Protein FASTA
+                        </h3>
+
+                        <p>
+                            Start with the predicted
+                            Metisa plana proteome.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Quality Control
+                        </h3>
+
+                        <p>
+                            Check sequence counts,
+                            lengths and sequence quality.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Cleaning
+                        </h3>
+
+                        <p>
+                            Prepare protein sequences
+                            for downstream analysis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            04
+                        </span>
+
+                        <h3>
+                            BLASTP
+                        </h3>
+
+                        <p>
+                            Compare Metisa proteins against
+                            reference protein databases.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Filtering
+                        </h3>
+
+                        <p>
+                            Retain informative hits using
+                            similarity and coverage criteria.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Contamination Screening
+                        </h3>
+
+                        <p>
+                            Review suspicious non-arthropod
+                            annotations before interpretation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            07
+                        </span>
+
+                        <h3>
+                            Domain Validation
+                        </h3>
+
+                        <p>
+                            Use InterPro or Pfam evidence
+                            to support protein function.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            08
+                        </span>
+
+                        <h3>
+                            Initial Ranking
+                        </h3>
+
+                        <p>
+                            Integrate homology, taxonomy,
+                            annotation, domain evidence and
+                            target relevance to retain
+                            the Top 500 candidates.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            09
+                        </span>
+
+                        <h3>
+                            RNA-seq Expression
+                        </h3>
+
+                        <p>
+                            Use developmental-stage expression
+                            data to prioritise larval-relevant
+                            candidates and retain the Top 100.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step">
+
+                        <span class="step-number">
+                            10
+                        </span>
+
+                        <h3>
+                            Phylogenetic Validation
+                        </h3>
+
+                        <p>
+                            Validate evolutionary placement using
+                            MAFFT, trimAl and IQ-TREE.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-arrow">→</div>
+
+
+                    <div class="workflow-step final-step">
+
+                        <span class="step-number">
+                            11
+                        </span>
+
+                        <h3>
+                            Final Top 10
+                        </h3>
+
+                        <p>
+                            Integrate expression, homology,
+                            annotation, phylogeny and target
+                            relevance to select the final
+                            10 priority targets.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             QC
+        ====================================== -->
+
+        <section id="qc">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        QUALITY ASSESSMENT
+                    </p>
+
+                    <h2>
+                        QC & Screening
+                    </h2>
+
+                    <p class="section-description">
+                        Quality-control and screening results used
+                        to assess the reliability of the
+                        Metisa plana dataset before final target
+                        prioritisation.
+                    </p>
+
+                </div>
+
+
+                <div class="qc-grid">
+
+
+                    <div class="qc-card">
+
+                        <span class="qc-icon">
+                            01
+                        </span>
+
+                        <h3>
+                            Sequence Quality
+                        </h3>
+
+                        <p>
+                            Protein sequence length,
+                            duplicate identifiers,
+                            ambiguous residues and
+                            general FASTA quality.
+                        </p>
+
+                        <div class="qc-status">
+                            QC Completed
+                        </div>
+
+                    </div>
+
+
+                    <div class="qc-card">
+
+                        <span class="qc-icon">
+                            02
+                        </span>
+
+                        <h3>
+                            BLAST Filtering
+                        </h3>
+
+                        <p>
+                            BLAST hits are filtered using
+                            sequence identity, query coverage
+                            and statistical significance.
+                        </p>
+
+                        <div class="qc-status">
+                            Filtered
+                        </div>
+
+                    </div>
+
+
+                    <div class="qc-card">
+
+                        <span class="qc-icon">
+                            03
+                        </span>
+
+                        <h3>
+                            Contamination Screening
+                        </h3>
+
+                        <p>
+                            Suspicious non-arthropod annotations
+                            are flagged for manual review before
+                            biological interpretation.
+                        </p>
+
+                        <div class="qc-status review">
+                            Manual Review
+                        </div>
+
+                    </div>
+
+
+                    <div class="qc-card">
+
+                        <span class="qc-icon">
+                            04
+                        </span>
+
+                        <h3>
+                            Domain Evidence
+                        </h3>
+
+                        <p>
+                            InterPro and Pfam evidence can be
+                            used to support final protein-function
+                            assignments.
+                        </p>
+
+                        <div class="qc-status">
+                            Domain Validation
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- WHOLE PROJECT QC -->
+
+                <div class="project-qc-summary">
+
+                    <h3>
+                        Whole-Project Sequence QC
+                    </h3>
+
+
+                    <p>
+                        <strong>Total genes:</strong>
+                        26,490
+                    </p>
+
+
+                    <p>
+                        <strong>Total bases:</strong>
+                        292,642,917
+                    </p>
+
+
+                    <p>
+                        <strong>Mean sequence length:</strong>
+                        11,047.30 bp
+                    </p>
+
+
+                    <p>
+                        <strong>Median sequence length:</strong>
+                        4,897.50 bp
+                    </p>
+
+
+                    <p>
+                        <strong>GC content:</strong>
+                        39.94%
+                    </p>
+
+
+                    <p>
+                        <strong>Ambiguous bases:</strong>
+                        0
+                    </p>
+
+
+                    <p>
+                        <strong>Invalid sequences:</strong>
+                        0
+                    </p>
+
+
+                    <p>
+                        <strong>Duplicate sequences:</strong>
+                        376
+                    </p>
+
+
+                </div>
+
+
+                <!-- SPLIT 4 QC -->
+
+                <div class="split-qc-heading">
+
+                    <p class="section-label">
+                        SPLIT 4 ANALYSIS
+                    </p>
+
+                    <h3>
+                        Protein BLAST & Screening Statistics
+                    </h3>
+
+                    <p>
+                        These statistics represent the
+                        6,622 proteins analysed in Split 4
+                        and are shown separately from the
+                        whole-project sequence QC above.
+                    </p>
+
+                </div>
+
+
+                <!-- Filled automatically by script.js -->
+
+                <div id="qc-chart"
+                     class="qc-chart-placeholder">
+
+                    <p>
+                        Loading Split 4 screening statistics...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             METHODS
+        ====================================== -->
+
+        <section id="methods">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        PROJECT RESOURCES
+                    </p>
+
+                    <h2>
+                        Methods & Downloads
+                    </h2>
+
+                    <p class="section-description">
+                        Explore the analysis methods,
+                        processed datasets,
+                        final candidate results and
+                        reproducible project resources.
+                    </p>
+
+                </div>
+
+
+                <div class="methods-grid">
+
+
+                    <div class="method-card">
+
+                        <h3>
+                            Analysis Methods
+                        </h3>
+
+                        <p>
+                            Quality control, BLASTP annotation,
+                            filtering, contamination screening,
+                            domain validation and target prioritisation.
+                        </p>
+
+                        <a href="#workflow"
+                           class="resource-button">
+
+                            View Workflow
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <h3>
+                            Top 10 Candidates
+                        </h3>
+
+                        <p>
+                            Final ranked molecular target candidates
+                            identified from the Metisa plana proteome.
+                        </p>
+
+                        <a href="#targets"
+                           class="resource-button">
+
+                            View Targets
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <h3>
+                            Processed Results
+                        </h3>
+
+                        <p>
+                            Download the final ranked candidate
+                            datasets used for target prioritisation.
+                        </p>
+
+                        <a
+                            href="data/top_targets.json"
+                            class="resource-button"
+                            download
+                        >
+                            Download Top 10
+                        </a>
+
+                        <a
+                            href="data/ranked_top100.json"
+                            class="resource-button"
+                            download
+                        >
+                            Download Top 100
+                        </a>
+
+                    </div>
+
+
+                    <div class="method-card">
+
+                        <h3>
+                            Source Code
+                        </h3>
+
+                        <p>
+                            Reproducible scripts and project files
+                            are maintained in the team's
+                            GitHub repository.
+                        </p>
+
+                        <a
+                            href="https://github.com/yanafarz/Metisa_plana_target_mining"
+                            class="resource-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Source Code
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-left">
+
+                <h3>
+                    Metisa Target Portal
+                </h3>
+
+                <p>
+                    Bioinformatics-driven molecular
+                    target discovery for Metisa plana.
+                </p>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <p>
+                    I-BIOHACKATHON 2026
+                </p>
+
+                <p>
+                    Track 2 — Bio-Analyst
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Metisa plana Target Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <a
+        href="#home"
+        class="back-to-top"
+        title="Back to top"
+    >
+        ↑
+    </a>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
