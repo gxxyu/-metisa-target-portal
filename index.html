@@ -10,9 +10,267 @@
     </title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================
+           TARGETING STRATEGIES
+        ========================================= */
+
+        #targeting .section-heading {
+            margin-bottom: 42px;
+        }
+
+        #targeting .targets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        #targeting .target-placeholder {
+            position: relative;
+            padding: 34px 34px 30px;
+            border: 1px solid rgba(64, 210, 255, 0.24);
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(15, 47, 67, 0.94),
+                    rgba(8, 30, 47, 0.96)
+                );
+
+            overflow: hidden;
+
+            box-shadow:
+                0 16px 40px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        #targeting .target-placeholder::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #32c7ff,
+                    #2ce2ca,
+                    #8c63ff
+                );
+        }
+
+        #targeting .target-placeholder::after {
+            content: "";
+
+            position: absolute;
+
+            width: 160px;
+            height: 160px;
+
+            top: -85px;
+            right: -70px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(50, 199, 255, 0.08);
+
+            pointer-events: none;
+        }
+
+        #targeting .target-placeholder:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(64, 210, 255, 0.48);
+
+            box-shadow:
+                0 22px 46px rgba(0, 0, 0, 0.26);
+        }
+
+        #targeting .target-placeholder > span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 44px;
+            height: 30px;
+
+            margin-bottom: 22px;
+            padding: 0 12px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(48, 199, 255, 0.10);
+
+            border:
+                1px solid rgba(48, 199, 255, 0.30);
+
+            color: #35c9ff;
+
+            font-size: 0.86rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+        }
+
+        #targeting .target-placeholder h3 {
+            margin: 0 0 24px;
+
+            color: #f5f8ff;
+
+            font-size: 1.55rem;
+            line-height: 1.25;
+        }
+
+        #targeting .targeting-row {
+            margin: 0;
+            padding: 14px 0;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.07);
+
+            color: #a9bdd0;
+
+            line-height: 1.65;
+        }
+
+        #targeting .targeting-row strong {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #dcecff;
+
+            font-size: 0.82rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        #targeting .targeting-strategy-box {
+            margin: 15px 0;
+            padding: 18px;
+
+            border:
+                1px solid rgba(45, 226, 202, 0.25);
+
+            border-radius: 14px;
+
+            background:
+                rgba(45, 226, 202, 0.07);
+
+            color: #b9d7d2;
+
+            line-height: 1.65;
+        }
+
+        #targeting .targeting-strategy-box strong {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #39dfca;
+
+            font-size: 0.82rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        #targeting .targeting-evidence-box {
+            margin-top: 15px;
+            padding: 16px 18px;
+
+            border:
+                1px solid rgba(255, 184, 66, 0.22);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255, 184, 66, 0.06);
+
+            color: #c7ced6;
+
+            line-height: 1.65;
+        }
+
+        #targeting .targeting-evidence-box strong {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #ffc15a;
+
+            font-size: 0.82rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        #targeting .qc-scope-note {
+            margin-top: 30px;
+            padding: 18px 22px;
+
+            border:
+                1px solid rgba(255, 184, 66, 0.22);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255, 184, 66, 0.05);
+
+            color: #b8c8d8;
+
+            line-height: 1.65;
+        }
+
+        @media (max-width: 850px) {
+
+            #targeting .targets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #targeting .target-placeholder {
+                padding: 28px 24px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            #targeting .target-placeholder {
+                transition: none;
+            }
+
+            #targeting .target-placeholder:hover {
+                transform: none;
+            }
+        }
+    </style>
+
 </head>
 
+
 <body>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
 
     <header>
 
@@ -21,18 +279,55 @@
             <h2>METIS</h2>
 
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#targets">Top Targets</a></li>
-                <li><a href="#targeting">Targeting Strategies</a></li>
-                <li><a href="#explorer">Protein Explorer</a></li>
-                <li><a href="#workflow">Workflow</a></li>
-                <li><a href="#qc">QC</a></li>
-                <li><a href="#methods">Methods</a></li>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#targets">
+                        Top Targets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#targeting">
+                        Targeting Strategies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#explorer">
+                        Protein Explorer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#workflow">
+                        Workflow
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#qc">
+                        QC
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#methods">
+                        Methods
+                    </a>
+                </li>
+
             </ul>
 
         </nav>
 
     </header>
+
 
 
     <main>
@@ -48,7 +343,11 @@
                 I-BIOHACKATHON 2026 · BIO-ANALYST
             </div>
 
-            <h1>METIS</h1>
+
+            <h1>
+                METIS
+            </h1>
+
 
             <p>
                 Metisa plana Evidence-integrated Target Identification System
@@ -61,7 +360,11 @@
                     Explore Targets
                 </button>
 
-                <a href="#workflow" class="secondary-button">
+
+                <a
+                    href="#workflow"
+                    class="secondary-button"
+                >
                     View Workflow
                 </a>
 
@@ -70,27 +373,46 @@
 
             <div class="hero-info">
 
-                <span>26,490 Predicted Proteins</span>
+                <span>
+                    26,490 Predicted Proteins
+                </span>
 
-                <span class="hero-dot">•</span>
+                <span class="hero-dot">
+                    •
+                </span>
 
-                <span>UniProt Annotation</span>
+                <span>
+                    UniProt Annotation
+                </span>
 
-                <span class="hero-dot">•</span>
+                <span class="hero-dot">
+                    •
+                </span>
 
-                <span>Domain Validation</span>
+                <span>
+                    Domain Validation
+                </span>
 
-                <span class="hero-dot">•</span>
+                <span class="hero-dot">
+                    •
+                </span>
 
-                <span>RNA-seq Integration</span>
+                <span>
+                    RNA-seq Integration
+                </span>
 
-                <span class="hero-dot">•</span>
+                <span class="hero-dot">
+                    •
+                </span>
 
-                <span>Phylogenetic Validation</span>
+                <span>
+                    Phylogenetic Validation
+                </span>
 
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -101,29 +423,63 @@
 
             <div class="stats-container">
 
-                <div class="stat-card">
-                    <h2>26,490</h2>
-                    <p>Predicted Proteins</p>
-                </div>
 
                 <div class="stat-card">
-                    <h2>Top 10</h2>
-                    <p>Priority Targets</p>
+
+                    <h2>
+                        26,490
+                    </h2>
+
+                    <p>
+                        Predicted Proteins
+                    </p>
+
                 </div>
 
-                <div class="stat-card">
-                    <h2>UniProt</h2>
-                    <p>Protein Annotation</p>
-                </div>
 
                 <div class="stat-card">
-                    <h2>InterPro</h2>
-                    <p>Domain Validation</p>
+
+                    <h2>
+                        Top 10
+                    </h2>
+
+                    <p>
+                        Priority Targets
+                    </p>
+
                 </div>
+
+
+                <div class="stat-card">
+
+                    <h2>
+                        UniProt
+                    </h2>
+
+                    <p>
+                        Protein Annotation
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h2>
+                        InterPro
+                    </h2>
+
+                    <p>
+                        Domain Validation
+                    </p>
+
+                </div>
+
 
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -134,22 +490,29 @@
 
             <div class="section-container">
 
+
                 <div class="section-heading">
+
 
                     <p class="section-label">
                         TARGET DISCOVERY
                     </p>
 
+
                     <h2>
                         Priority Molecular Targets
                     </h2>
 
+
                     <p class="section-description">
+
                         Candidate proteins identified through integrated
                         bioinformatics analysis and prioritised using
                         sequence similarity, domain evidence, expression,
                         phylogenetic support and biological relevance.
+
                     </p>
+
 
                 </div>
 
@@ -158,12 +521,15 @@
 
                 <div
                     id="candidate-table"
-                    class="targets-grid">
+                    class="targets-grid"
+                >
                 </div>
+
 
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -174,98 +540,186 @@
 
             <div class="section-container">
 
+
                 <div class="section-heading">
+
 
                     <p class="section-label">
                         CANDIDATE INTERVENTIONS
                     </p>
 
+
                     <h2>
                         Candidate Targeting Strategies
                     </h2>
 
+
                     <p class="section-description">
+
                         Literature-supported inhibitor strategies mapped to
                         the protein families represented in the final Top 10.
+
                         These mappings are hypothesis-generating and do not
                         demonstrate pesticide efficacy in Metisa plana.
+
                         Experimental validation is required.
+
                     </p>
 
+
                 </div>
+
 
 
                 <div class="targets-grid">
 
 
+                    <!-- =====================================
+                         TRYPSIN TARGET
+                    ====================================== -->
+
                     <div class="target-placeholder">
+
 
                         <span>
                             01
                         </span>
 
+
                         <h3>
                             Trypsin / Peptidase S1
                         </h3>
 
-                        <p>
-                            <strong>Final Top 10 proteins:</strong>
-                            g13783.t1, g14298.t1, g13779.t1,
-                            g13784.t1, g14301.t1 and g18520.t1
+
+                        <p class="targeting-row">
+
+                            <strong>
+                                Final Top 10 proteins
+                            </strong>
+
+                            g13783.t1,
+                            g14298.t1,
+                            g13779.t1,
+                            g13784.t1,
+                            g14301.t1
+                            and
+                            g18520.t1
+
                         </p>
 
-                        <p>
-                            <strong>Candidate inhibitor class:</strong>
+
+
+                        <div class="targeting-strategy-box">
+
+                            <strong>
+                                Candidate targeting strategy
+                            </strong>
+
                             Bowman-Birk proteinase inhibitors
-                        </p>
 
-                        <p>
-                            <strong>Proposed targeting rationale:</strong>
+                        </div>
+
+
+
+                        <p class="targeting-row">
+
+                            <strong>
+                                Proposed targeting rationale
+                            </strong>
+
                             Inhibition of trypsin/chymotrypsin-like
                             serine proteases may interfere with
                             larval dietary protein digestion.
+
                         </p>
 
-                        <p>
-                            <strong>Evidence status:</strong>
+
+
+                        <div class="targeting-evidence-box">
+
+                            <strong>
+                                Evidence status
+                            </strong>
+
                             Literature-supported inhibitor mapping;
                             validation in Metisa plana is required.
-                        </p>
+
+                        </div>
+
 
                     </div>
 
 
+
+                    <!-- =====================================
+                         LIPASE TARGET
+                    ====================================== -->
+
                     <div class="target-placeholder">
+
 
                         <span>
                             02
                         </span>
 
+
                         <h3>
                             Triacylglycerol Lipase
                         </h3>
 
-                        <p>
-                            <strong>Final Top 10 proteins:</strong>
-                            g4082.t1, g4084.t1, g4083.t1 and g4086.t1
+
+                        <p class="targeting-row">
+
+                            <strong>
+                                Final Top 10 proteins
+                            </strong>
+
+                            g4082.t1,
+                            g4084.t1,
+                            g4083.t1
+                            and
+                            g4086.t1
+
                         </p>
 
-                        <p>
-                            <strong>Candidate inhibitor:</strong>
+
+
+                        <div class="targeting-strategy-box">
+
+                            <strong>
+                                Candidate targeting strategy
+                            </strong>
+
                             Tetrahydrolipstatin (THL; orlistat)
-                        </p>
 
-                        <p>
-                            <strong>Proposed targeting rationale:</strong>
+                        </div>
+
+
+
+                        <p class="targeting-row">
+
+                            <strong>
+                                Proposed targeting rationale
+                            </strong>
+
                             Lipase inhibition may reduce dietary
                             lipid hydrolysis during larval feeding.
+
                         </p>
 
-                        <p>
-                            <strong>Evidence status:</strong>
+
+
+                        <div class="targeting-evidence-box">
+
+                            <strong>
+                                Evidence status
+                            </strong>
+
                             Literature-supported inhibitor mapping;
                             validation in Metisa plana is required.
-                        </p>
+
+                        </div>
+
 
                     </div>
 
@@ -273,16 +727,22 @@
                 </div>
 
 
+
                 <p class="qc-scope-note">
+
                     Candidate targeting strategies are presented as
                     computationally and literature-supported hypotheses.
+
                     They should not be interpreted as confirmed pesticides
                     or experimentally validated treatments for Metisa plana.
+
                 </p>
+
 
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -293,23 +753,31 @@
 
             <div class="section-container">
 
+
                 <div class="section-heading">
+
 
                     <p class="section-label">
                         RANKED CANDIDATES
                     </p>
 
+
                     <h2>
                         Protein Explorer
                     </h2>
 
+
                     <p class="section-description">
+
                         Search and explore the ranked Top 100
                         Metisa plana candidate proteins retained
                         after integrated prioritisation.
+
                     </p>
 
+
                 </div>
+
 
 
                 <div class="explorer-box">
@@ -317,74 +785,94 @@
 
                     <div class="search-area">
 
+
                         <input
                             type="text"
                             id="protein-search"
                             placeholder="Search protein ID, function, family or target class..."
                         >
 
+
                         <button id="search-button">
                             Search
                         </button>
 
+
                     </div>
+
 
 
                     <div class="filter-area">
 
+
                         <select id="family-filter">
+
 
                             <option value="">
                                 All Target Classes
                             </option>
 
+
                             <option value="DIGESTION">
                                 Digestion
                             </option>
+
 
                             <option value="TARGET-SITE">
                                 Target-Site
                             </option>
 
+
                         </select>
 
 
+
                         <select id="status-filter">
+
 
                             <option value="">
                                 All Expression Levels
                             </option>
 
+
                             <option value="Very High">
                                 Very High
                             </option>
+
 
                             <option value="High">
                                 High
                             </option>
 
+
                             <option value="Moderate">
                                 Moderate
                             </option>
 
+
                         </select>
 
+
                     </div>
+
 
 
                     <!-- Filled automatically by script.js -->
 
                     <div
                         id="protein-results"
-                        class="protein-results">
+                        class="protein-results"
+                    >
                     </div>
 
 
                 </div>
 
+
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -398,25 +886,34 @@
 
                 <div class="section-heading">
 
+
                     <p class="section-label">
                         ANALYSIS PIPELINE
                     </p>
+
 
                     <h2>
                         METIS Bioinformatics Workflow
                     </h2>
 
+
                     <p class="section-description">
+
                         An evidence-integrated workflow from the
                         predicted Metisa plana proteome to
                         biologically prioritised molecular targets.
+
                     </p>
+
 
                 </div>
 
 
+
                 <div class="workflow-grid">
 
+
+                    <!-- STEP 1 -->
 
                     <div class="workflow-step">
 
@@ -436,8 +933,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 2 -->
 
                     <div class="workflow-step">
 
@@ -457,8 +959,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 3 -->
 
                     <div class="workflow-step">
 
@@ -478,8 +985,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 4 -->
 
                     <div class="workflow-step">
 
@@ -499,8 +1011,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 5 -->
 
                     <div class="workflow-step">
 
@@ -520,8 +1037,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 6 -->
 
                     <div class="workflow-step">
 
@@ -541,8 +1063,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 7 -->
 
                     <div class="workflow-step">
 
@@ -562,8 +1089,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 8 -->
 
                     <div class="workflow-step">
 
@@ -585,8 +1117,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 9 -->
 
                     <div class="workflow-step">
 
@@ -607,8 +1144,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 10 -->
 
                     <div class="workflow-step">
 
@@ -628,8 +1170,13 @@
                     </div>
 
 
-                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-arrow">
+                        →
+                    </div>
 
+
+
+                    <!-- STEP 11 -->
 
                     <div class="workflow-step final-step">
 
@@ -653,9 +1200,11 @@
 
                 </div>
 
+
             </div>
 
         </section>
+
 
 
         <!-- =====================================
@@ -669,26 +1218,35 @@
 
                 <div class="section-heading">
 
+
                     <p class="section-label">
                         QUALITY ASSESSMENT
                     </p>
+
 
                     <h2>
                         QC & Screening
                     </h2>
 
+
                     <p class="section-description">
+
                         Quality-control and screening results used
                         to assess the reliability of the
                         Metisa plana dataset before final target
                         prioritisation.
+
                     </p>
+
 
                 </div>
 
 
+
                 <div class="qc-grid">
 
+
+                    <!-- QC 1 -->
 
                     <div class="qc-card">
 
@@ -713,6 +1271,9 @@
                     </div>
 
 
+
+                    <!-- QC 2 -->
+
                     <div class="qc-card">
 
                         <span class="qc-icon">
@@ -736,6 +1297,9 @@
                     </div>
 
 
+
+                    <!-- QC 3 -->
+
                     <div class="qc-card">
 
                         <span class="qc-icon">
@@ -758,6 +1322,9 @@
 
                     </div>
 
+
+
+                    <!-- QC 4 -->
 
                     <div class="qc-card">
 
@@ -784,11 +1351,13 @@
                 </div>
 
 
+
                 <!-- =====================================
                      WHOLE-PROJECT SEQUENCE QC
                 ====================================== -->
 
                 <div class="project-qc-summary">
+
 
                     <h3>
                         Whole-Project Sequence QC
@@ -796,54 +1365,79 @@
 
 
                     <p>
-                        <strong>Total genes:</strong>
+                        <strong>
+                            Total genes:
+                        </strong>
+
                         26,490
                     </p>
 
 
                     <p>
-                        <strong>Total bases:</strong>
+                        <strong>
+                            Total bases:
+                        </strong>
+
                         292,642,917
                     </p>
 
 
                     <p>
-                        <strong>Mean sequence length:</strong>
+                        <strong>
+                            Mean sequence length:
+                        </strong>
+
                         11,047.30 bp
                     </p>
 
 
                     <p>
-                        <strong>Median sequence length:</strong>
+                        <strong>
+                            Median sequence length:
+                        </strong>
+
                         4,897.50 bp
                     </p>
 
 
                     <p>
-                        <strong>GC content:</strong>
+                        <strong>
+                            GC content:
+                        </strong>
+
                         39.94%
                     </p>
 
 
                     <p>
-                        <strong>Ambiguous bases:</strong>
+                        <strong>
+                            Ambiguous bases:
+                        </strong>
+
                         0
                     </p>
 
 
                     <p>
-                        <strong>Invalid sequences:</strong>
+                        <strong>
+                            Invalid sequences:
+                        </strong>
+
                         0
                     </p>
 
 
                     <p>
-                        <strong>Duplicate sequences:</strong>
+                        <strong>
+                            Duplicate sequences:
+                        </strong>
+
                         376
                     </p>
 
 
                 </div>
+
 
 
                 <!-- =====================================
@@ -852,29 +1446,37 @@
 
                 <div class="split-qc-heading">
 
+
                     <p class="section-label">
                         WHOLE-PROJECT PROTEIN ANALYSIS
                     </p>
+
 
                     <h3>
                         Protein BLAST & Screening Statistics
                     </h3>
 
+
                     <p>
+
                         These statistics represent the complete
                         26,490-protein Metisa plana dataset and
                         summarise whole-project BLAST annotation,
                         filtering and contamination-screening results.
+
                     </p>
 
+
                 </div>
+
 
 
                 <!-- Filled automatically by script.js -->
 
                 <div
                     id="qc-chart"
-                    class="qc-chart-placeholder">
+                    class="qc-chart-placeholder"
+                >
 
                     <p>
                         Loading whole-project protein statistics...
@@ -888,6 +1490,7 @@
         </section>
 
 
+
         <!-- =====================================
              METHODS
         ====================================== -->
@@ -899,25 +1502,35 @@
 
                 <div class="section-heading">
 
+
                     <p class="section-label">
                         PROJECT RESOURCES
                     </p>
+
 
                     <h2>
                         Methods & Downloads
                     </h2>
 
+
                     <p class="section-description">
+
                         Explore the METIS analysis workflow,
-                        processed datasets, final candidate results
-                        and reproducible project resources.
+                        processed datasets,
+                        final candidate results and
+                        reproducible project resources.
+
                     </p>
+
 
                 </div>
 
 
+
                 <div class="methods-grid">
 
+
+                    <!-- METHODS -->
 
                     <div class="method-card">
 
@@ -926,22 +1539,29 @@
                         </h3>
 
                         <p>
-                            Quality control, BLASTP annotation,
-                            filtering, contamination screening,
-                            domain validation, RNA-seq integration,
-                            phylogenetic validation and target prioritisation.
+                            Quality control,
+                            BLASTP annotation,
+                            filtering,
+                            contamination screening,
+                            domain validation,
+                            RNA-seq integration,
+                            phylogenetic validation
+                            and target prioritisation.
                         </p>
+
 
                         <a
                             href="#workflow"
-                            class="resource-button">
-
+                            class="resource-button"
+                        >
                             View Workflow
-
                         </a>
 
                     </div>
 
+
+
+                    <!-- TOP 10 -->
 
                     <div class="method-card">
 
@@ -955,16 +1575,19 @@
                             evidence-integration workflow.
                         </p>
 
+
                         <a
                             href="#targets"
-                            class="resource-button">
-
+                            class="resource-button"
+                        >
                             View Targets
-
                         </a>
 
                     </div>
 
+
+
+                    <!-- DOWNLOADS -->
 
                     <div class="method-card">
 
@@ -972,31 +1595,35 @@
                             Processed Results
                         </h3>
 
+
                         <p>
                             Download the final ranked candidate
                             datasets used for target prioritisation.
                         </p>
 
+
                         <a
                             href="data/top_targets.json"
                             class="resource-button"
-                            download>
-
+                            download
+                        >
                             Download Top 10
-
                         </a>
+
 
                         <a
                             href="data/ranked_top100.json"
                             class="resource-button"
-                            download>
-
+                            download
+                        >
                             Download Top 100
-
                         </a>
 
                     </div>
 
+
+
+                    <!-- TEAM GITHUB -->
 
                     <div class="method-card">
 
@@ -1004,28 +1631,34 @@
                             Team GitHub Repository
                         </h3>
 
+
                         <p>
+
                             The complete METIS analysis workflow,
                             scripts and project resources are maintained
                             in the team's private GitHub repository.
+
                             Repository access is limited to authorised
                             project members.
+
                         </p>
+
 
                         <a
                             href="https://github.com/yanafarz/Metisa_plana_target_mining"
                             class="resource-button"
                             target="_blank"
-                            rel="noopener noreferrer">
-
+                            rel="noopener noreferrer"
+                        >
                             View Team Repository
-
                         </a>
+
 
                     </div>
 
 
                 </div>
+
 
             </div>
 
@@ -1035,11 +1668,13 @@
     </main>
 
 
+
     <!-- =====================================
          FOOTER
     ====================================== -->
 
     <footer>
+
 
         <div class="footer-container">
 
@@ -1058,6 +1693,7 @@
             </div>
 
 
+
             <div class="footer-right">
 
                 <p>
@@ -1074,6 +1710,7 @@
         </div>
 
 
+
         <div class="footer-bottom">
 
             <p>
@@ -1082,15 +1719,23 @@
 
         </div>
 
+
     </footer>
 
+
+
+    <!-- =====================================
+         BACK TO TOP
+    ====================================== -->
 
     <a
         href="#home"
         class="back-to-top"
-        title="Back to top">
+        title="Back to top"
+    >
         ↑
     </a>
+
 
 
     <script src="script.js"></script>
