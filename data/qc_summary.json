@@ -1,12 +1,18 @@
 {
-    "scope": "split_4",
-    "input_proteins": 6622,
-    "original_blast_hit_rows": 25231,
-    "filtered_blast_hit_rows": 11450,
-    "unique_filtered_proteins": 2317,
-    "arthropod": 755,
-    "bacterial": 105,
-    "fungal": 21,
-    "other_non_arthropod": 1436,
-    "flagged_for_review": 1562
+  "scope": "whole_project",
+  "input_proteins": 26490,
+  "proteins_with_any_blast_hit": 23313,
+  "proteins_without_blast_hit": 3177,
+  "original_blast_hit_rows": 249732,
+  "filtered_blast_hit_rows": 156525,
+  "unique_filtered_proteins": 16860,
+  "arthropod": 12366,
+  "non_arthropod_eukaryote": 3086,
+  "ambiguous": 807,
+  "bacterial": 305,
+  "fungal": 234,
+  "other_prokaryote": 42,
+  "unknown_taxonomy": 20,
+  "no_qualifying_hit": 6453,
+  "flagged_for_review": 4494
 }
