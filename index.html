@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Metisa plana Target Portal</title>
+    <title>
+        METIS | Metisa plana Evidence-integrated Target Identification System
+    </title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +18,7 @@
 
         <nav>
 
-            <h2>Metisa Target Portal</h2>
+            <h2>METIS</h2>
 
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -45,11 +47,10 @@
                 I-BIOHACKATHON 2026 · BIO-ANALYST
             </div>
 
-            <h1>Metisa plana Target Portal</h1>
+            <h1>METIS</h1>
 
             <p>
-                Bioinformatics-driven discovery of molecular targets
-                for improved bagworm control.
+                Metisa plana Evidence-integrated Target Identification System
             </p>
 
 
@@ -77,6 +78,14 @@
                 <span class="hero-dot">•</span>
 
                 <span>Domain Validation</span>
+
+                <span class="hero-dot">•</span>
+
+                <span>RNA-seq Integration</span>
+
+                <span class="hero-dot">•</span>
+
+                <span>Phylogenetic Validation</span>
 
             </div>
 
@@ -135,10 +144,10 @@
                     </h2>
 
                     <p class="section-description">
-                        Candidate proteins identified through bioinformatics
-                        analysis and prioritised using sequence similarity,
-                        domain evidence, biological relevance and quality
-                        assessment.
+                        Candidate proteins identified through integrated
+                        bioinformatics analysis and prioritised using
+                        sequence similarity, domain evidence, expression,
+                        phylogenetic support and biological relevance.
                     </p>
 
                 </div>
@@ -146,8 +155,9 @@
 
                 <!-- Filled automatically by script.js -->
 
-                <div id="candidate-table"
-                     class="targets-grid">
+                <div
+                    id="candidate-table"
+                    class="targets-grid">
                 </div>
 
             </div>
@@ -244,8 +254,9 @@
 
                     <!-- Filled automatically by script.js -->
 
-                    <div id="protein-results"
-                         class="protein-results">
+                    <div
+                        id="protein-results"
+                        class="protein-results">
                     </div>
 
 
@@ -272,12 +283,13 @@
                     </p>
 
                     <h2>
-                        Bioinformatics Workflow
+                        METIS Bioinformatics Workflow
                     </h2>
 
                     <p class="section-description">
-                        From predicted Metisa plana proteins
-                        to biologically prioritised molecular targets.
+                        An evidence-integrated workflow from the
+                        predicted Metisa plana proteome to
+                        biologically prioritised molecular targets.
                     </p>
 
                 </div>
@@ -382,7 +394,7 @@
 
                         <p>
                             Retain informative hits using
-                            similarity and coverage criteria.
+                            sequence similarity and coverage criteria.
                         </p>
 
                     </div>
@@ -423,8 +435,8 @@
                         </h3>
 
                         <p>
-                            Use InterPro or Pfam evidence
-                            to support protein function.
+                            Use InterPro and Pfam evidence
+                            to support protein-function assignments.
                         </p>
 
                     </div>
@@ -513,7 +525,7 @@
                             Integrate expression, homology,
                             annotation, phylogeny and target
                             relevance to select the final
-                            10 priority targets.
+                            10 priority molecular targets.
                         </p>
 
                     </div>
@@ -569,10 +581,9 @@
                         </h3>
 
                         <p>
-                            Protein sequence length,
-                            duplicate identifiers,
-                            ambiguous residues and
-                            general FASTA quality.
+                            Sequence length, duplicate records,
+                            ambiguous bases and general
+                            input-sequence quality.
                         </p>
 
                         <div class="qc-status">
@@ -639,9 +650,8 @@
                         </h3>
 
                         <p>
-                            InterPro and Pfam evidence can be
-                            used to support final protein-function
-                            assignments.
+                            InterPro and Pfam evidence support
+                            final protein-function assignments.
                         </p>
 
                         <div class="qc-status">
@@ -654,7 +664,9 @@
                 </div>
 
 
-                <!-- WHOLE PROJECT QC -->
+                <!-- =====================================
+                     WHOLE-PROJECT SEQUENCE QC
+                ====================================== -->
 
                 <div class="project-qc-summary">
 
@@ -714,38 +726,42 @@
                 </div>
 
 
-                <!-- WHOLE-PROJECT PROTEIN ANALYSIS -->
+                <!-- =====================================
+                     WHOLE-PROJECT PROTEIN ANALYSIS
+                ====================================== -->
 
-<div class="split-qc-heading">
+                <div class="split-qc-heading">
 
-    <p class="section-label">
-        WHOLE-PROJECT PROTEIN ANALYSIS
-    </p>
+                    <p class="section-label">
+                        WHOLE-PROJECT PROTEIN ANALYSIS
+                    </p>
 
-    <h3>
-        Protein BLAST & Screening Statistics
-    </h3>
+                    <h3>
+                        Protein BLAST & Screening Statistics
+                    </h3>
 
-    <p>
-        These statistics represent the complete
-        26,490-protein Metisa plana dataset and summarise
-        whole-project BLAST annotation, filtering and
-        contamination-screening results.
-    </p>
+                    <p>
+                        These statistics represent the complete
+                        26,490-protein Metisa plana dataset and
+                        summarise whole-project BLAST annotation,
+                        filtering and contamination-screening results.
+                    </p>
 
-</div>
+                </div>
 
 
-<!-- Filled automatically by script.js -->
+                <!-- Filled automatically by script.js -->
 
-<div id="qc-chart"
-     class="qc-chart-placeholder">
+                <div
+                    id="qc-chart"
+                    class="qc-chart-placeholder">
 
-    <p>
-        Loading whole-project protein statistics...
-    </p>
+                    <p>
+                        Loading whole-project protein statistics...
+                    </p>
 
-</div>
+                </div>
+
 
             </div>
 
@@ -772,10 +788,9 @@
                     </h2>
 
                     <p class="section-description">
-                        Explore the analysis methods,
-                        processed datasets,
-                        final candidate results and
-                        reproducible project resources.
+                        Explore the METIS analysis workflow,
+                        processed datasets, final candidate results
+                        and reproducible portal resources.
                     </p>
 
                 </div>
@@ -793,11 +808,13 @@
                         <p>
                             Quality control, BLASTP annotation,
                             filtering, contamination screening,
-                            domain validation and target prioritisation.
+                            domain validation, RNA-seq integration,
+                            phylogenetic validation and target prioritisation.
                         </p>
 
-                        <a href="#workflow"
-                           class="resource-button">
+                        <a
+                            href="#workflow"
+                            class="resource-button">
 
                             View Workflow
 
@@ -814,11 +831,13 @@
 
                         <p>
                             Final ranked molecular target candidates
-                            identified from the Metisa plana proteome.
+                            identified using the METIS
+                            evidence-integration workflow.
                         </p>
 
-                        <a href="#targets"
-                           class="resource-button">
+                        <a
+                            href="#targets"
+                            class="resource-button">
 
                             View Targets
 
@@ -841,16 +860,14 @@
                         <a
                             href="data/top_targets.json"
                             class="resource-button"
-                            download
-                        >
+                            download>
                             Download Top 10
                         </a>
 
                         <a
                             href="data/ranked_top100.json"
                             class="resource-button"
-                            download
-                        >
+                            download>
                             Download Top 100
                         </a>
 
@@ -859,22 +876,28 @@
 
                     <div class="method-card">
 
-    <h3>
-        Reproducible Analysis
-    </h3>
+                        <h3>
+                            GitHub Repository
+                        </h3>
 
-    <p>
-        Analysis scripts and intermediate project files
-        are maintained separately by the project team.
-        This portal presents the processed results and
-        prioritised molecular targets.
-    </p>
+                        <p>
+                            Access the public METIS portal repository
+                            containing the website implementation and
+                            processed resources used by this portal.
+                        </p>
 
-    <span class="resource-button disabled-button">
-        Team Project Resource
-    </span>
+                        <a
+                            href="https://github.com/gxxyu/-metisa-target-portal"
+                            class="resource-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
 
-</div>
+                            View GitHub Repository
+
+                        </a>
+
+                    </div>
+
 
                 </div>
 
@@ -898,12 +921,12 @@
             <div class="footer-left">
 
                 <h3>
-                    Metisa Target Portal
+                    METIS
                 </h3>
 
                 <p>
-                    Bioinformatics-driven molecular
-                    target discovery for Metisa plana.
+                    Metisa plana Evidence-integrated
+                    Target Identification System.
                 </p>
 
             </div>
@@ -928,7 +951,7 @@
         <div class="footer-bottom">
 
             <p>
-                © 2026 Metisa plana Target Portal
+                © 2026 METIS · Metisa plana Target Identification System
             </p>
 
         </div>
@@ -939,8 +962,7 @@
     <a
         href="#home"
         class="back-to-top"
-        title="Back to top"
-    >
+        title="Back to top">
         ↑
     </a>
 
