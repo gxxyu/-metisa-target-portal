@@ -2633,3 +2633,276 @@ main section {
     }
 
 }
+
+/* =========================================
+   TARGETING STRATEGIES
+========================================= */
+
+#targeting {
+    position: relative;
+}
+
+#targeting .section-heading {
+    margin-bottom: 42px;
+}
+
+#targeting .targets-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* Main strategy cards */
+
+#targeting .target-placeholder {
+    position: relative;
+
+    padding: 34px 34px 30px;
+
+    border: 1px solid rgba(64, 210, 255, 0.24);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 47, 67, 0.94),
+            rgba(8, 30, 47, 0.96)
+        );
+
+    overflow: hidden;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Cyan-purple accent line */
+
+#targeting .target-placeholder::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #32c7ff,
+            #2ce2ca,
+            #8c63ff
+        );
+}
+
+
+/* Decorative glow */
+
+#targeting .target-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -85px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(50, 199, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+#targeting .target-placeholder:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(64, 210, 255, 0.48);
+
+    box-shadow:
+        0 22px 46px rgba(0, 0, 0, 0.26);
+}
+
+
+/* Number */
+
+#targeting .target-placeholder > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 44px;
+    height: 30px;
+
+    margin-bottom: 22px;
+    padding: 0 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(48, 199, 255, 0.10);
+
+    border:
+        1px solid rgba(48, 199, 255, 0.30);
+
+    color: #35c9ff;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+
+/* Target family name */
+
+#targeting .target-placeholder h3 {
+    margin: 0 0 24px;
+
+    color: #f5f8ff;
+
+    font-size: 1.55rem;
+    line-height: 1.25;
+}
+
+
+/* Information rows */
+
+#targeting .target-placeholder p {
+    margin: 0;
+    padding: 14px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    color: #a9bdd0;
+
+    line-height: 1.65;
+}
+
+
+#targeting .target-placeholder p:last-child {
+    border-bottom: none;
+}
+
+
+/* Labels */
+
+#targeting .target-placeholder strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #dcecff;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+
+/* Make candidate strategy stand out */
+
+#targeting .target-placeholder p:nth-of-type(2) {
+    margin: 15px 0;
+    padding: 18px;
+
+    border:
+        1px solid rgba(45, 226, 202, 0.25);
+
+    border-radius: 14px;
+
+    background:
+        rgba(45, 226, 202, 0.07);
+}
+
+
+#targeting .target-placeholder p:nth-of-type(2) strong {
+    color: #39dfca;
+}
+
+
+/* Evidence / validation row */
+
+#targeting .target-placeholder p:last-child {
+    margin-top: 15px;
+    padding: 16px 18px;
+
+    border:
+        1px solid rgba(255, 184, 66, 0.22);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 184, 66, 0.06);
+}
+
+
+#targeting .target-placeholder p:last-child strong {
+    color: #ffc15a;
+}
+
+
+/* Disclaimer below cards */
+
+#targeting .qc-scope-note {
+    margin-top: 30px;
+    padding: 18px 22px;
+
+    border:
+        1px solid rgba(255, 184, 66, 0.22);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 184, 66, 0.05);
+
+    color: #b8c8d8;
+
+    line-height: 1.65;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    #targeting .targets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #targeting .target-placeholder {
+        padding: 28px 24px;
+    }
+
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #targeting .target-placeholder {
+        transition: none;
+    }
+
+    #targeting .target-placeholder:hover {
+        transform: none;
+    }
+
+}
