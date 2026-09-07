@@ -431,7 +431,7 @@ fetch("data/qc_summary.json")
 
                 <div class="qc-summary-item">
 
-                    <span>Original BLAST Hits</span>
+                    <span>Original BLAST Hit Rows</span>
 
                     <strong>
                         ${qc.original_blast_hit_rows.toLocaleString()}
@@ -442,7 +442,7 @@ fetch("data/qc_summary.json")
 
                 <div class="qc-summary-item">
 
-                    <span>Filtered BLAST Hits</span>
+                   <span>Filtered BLAST Hit Rows</span>
 
                     <strong>
                         ${qc.filtered_blast_hit_rows.toLocaleString()}
@@ -510,13 +510,15 @@ fetch("data/qc_summary.json")
 
             <p class="qc-scope-note">
 
-                Current dashboard scope:
-                <strong>${qc.scope.replace("_", " ")}</strong>
+    Current dashboard scope:
+    <strong>Whole Project</strong>
 
-                — these are preliminary Split 4 statistics,
-                not whole-project totals.
+    — merged BLAST and screening statistics for the
+    complete 26,490-protein Metisa plana dataset.
+    Flagged For Review indicates records requiring
+    manual review, not confirmed contaminants.
 
-            </p>
+</p>
 
         `;
 
